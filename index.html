@@ -253,7 +253,7 @@
             Скидка 10% для друзей из социальных сетей.
           </p>
         </div>
-  
+
         <ul class="socials__list">
           <li class="socials__item">
             <a href="#">
@@ -304,5 +304,25 @@
     </form>
     <button class="modal__close" type="button">Закрыть</button>
   </section>
+
+  <script>
+    const modalContactOpen = document.querySelector('a[href="#feedback"]');
+    const modalContact = document.querySelector('#feedback');
+    const modalContactClose = modalContact.querySelector('.modal__close');
+
+    modalContactOpen.addEventListener('click', function (evt) {
+      evt.preventDefault();
+
+      if (!modalContact.classList.contains('modal--show')) {
+        modalContact.classList.add('modal--show');
+      }
+    });
+
+    modalContactClose.addEventListener('click', function (evt) {
+      evt.preventDefault();
+
+      modalContact.classList.remove('modal--show');
+    });
+  </script>
 </body>
 </html>
