@@ -678,11 +678,12 @@ input[type="radio"].visually-hidden {
   background-color: #fff;
   transform: translate(-50%, -50%);
   opacity: 0;
+  transition: .3s opacity;
 }
 
 .modal--show {
   display: block;
-  
+
   opacity: 1;
 }
 
