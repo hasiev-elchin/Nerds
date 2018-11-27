@@ -260,7 +260,7 @@
         <p>
           тел. +7 (812) 275-75-75
         </p>
-        <a href="#feedback" class="btn">Напишите нам</a>
+        <a href="#feedback" class="btn contacts__write">Напишите нам</a>
       </div>
     </div>
   </section>
@@ -325,5 +325,25 @@
   </form>
   <button class="modal__close" type="button">Закрыть</button>
 </section>
+
+<script>
+  const modalContactOpen = document.querySelector('.contacts__write');
+  const modalContact = document.querySelector('#feedback');
+  const modalContactClose = modalContact.querySelector('.modal__close');
+
+  modalContactOpen.addEventListener('click', function (evt) {
+    evt.preventDefault();
+
+    if (!modalContact.classList.contains('modal--show')) {
+      modalContact.classList.add('modal--show');
+    }
+  });
+
+  modalContactClose.addEventListener('click', function (evt) {
+    evt.preventDefault();
+
+    modalContact.classList.remove('modal--show');
+  });
+</script>
 </body>
 </html>
